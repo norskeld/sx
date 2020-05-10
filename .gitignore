@@ -1,0 +1,27 @@
+node_modules
+dist
+
+# macOS
+.DS_Store
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories & files
+.vscode
+.idea
+
+# Coverage reports
+.nyc_output
+coverage
+
+# NPM
+.npm
+
+# Dotenv files
+.env.local
+.env.*.local
