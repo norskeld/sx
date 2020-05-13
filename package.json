@@ -18,6 +18,7 @@
     "release": "npx semantic-release",
     "release:dry": "npx semantic-release --dry-run",
     "test": "echo \"Passed\"",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
