@@ -1,0 +1,27 @@
+version: 2
+jobs:
+  test-node-10:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm i
+      - run: npm run test
+
+  release:
+    docker:
+      - image: circleci/node:10
+    steps:
+      - checkout
+      - run: npm i
+      - run: npm run build
+      - run: npx semantic-release
+
+workflows:
+  version: 2
+  test_and_release:
+    jobs:
+      - test-node-10
+      - release:
+          requires:
+            - test-node-10
