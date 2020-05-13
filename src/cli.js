@@ -8,7 +8,7 @@ import { error } from './logger'
 /**
  * Spin it up.
  */
-export async function xs () {
+export async function sx () {
   try {
     checkTTY()
 

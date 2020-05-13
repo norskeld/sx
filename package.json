@@ -1,5 +1,5 @@
 {
-  "name": "x-s",
+  "name": "@arcdelta/sx",
   "version": "1.0.0",
   "description": "Micro CLI for interactive listing & running npm scripts.",
   "main": "./dist/index.js",
@@ -7,7 +7,7 @@
     "dist"
   ],
   "bin": {
-    "x-s": "./bin/x-s"
+    "sx": "./bin/sx"
   },
   "scripts": {
     "build": "rollup -c",

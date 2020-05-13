@@ -1,3 +1,3 @@
-import { xs } from './cli'
+import { sx } from './cli'
 
-xs()
+sx()
