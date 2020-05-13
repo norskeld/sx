@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test-node-10:
+  test:
     docker:
       - image: circleci/node:10
     steps:
@@ -19,9 +19,9 @@ jobs:
 
 workflows:
   version: 2
-  test_and_release:
+  semantic-release:
     jobs:
-      - test-node-10
+      - test
       - release:
           requires:
-            - test-node-10
+            - test
