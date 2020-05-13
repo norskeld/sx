@@ -45,6 +45,11 @@ This project relies on the following packages:
 
 Also [rollup](https://rollupjs.org/) and [babel](https://babeljs.io/).
 
+## Why not TypeScript?
+
+That's the question I asked myself, and the answer is simple: because of poor
+typings on some deps like [enquirer](https://github.com/enquirer/enquirer).
+
 ## License
 
 MIT.
