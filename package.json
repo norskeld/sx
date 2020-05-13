@@ -16,7 +16,8 @@
     "lint:fix": "eslint . --ext .js --fix",
     "install:g": "npm run build && npm i -g",
     "release": "npx semantic-release",
-    "release:dry": "npx semantic-release --dry-run"
+    "release:dry": "npx semantic-release --dry-run",
+    "test": "echo \"Passed\"",
   },
   "repository": {
     "type": "git",
