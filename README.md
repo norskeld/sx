@@ -1,6 +1,10 @@
-# sx
+# :zap: sx
 
-> Micro CLI for interactive listing & running npm/yarn scripts.
+![CircleCI](https://img.shields.io/circleci/build/github/arcdelta/sx/master)
+[![npm (scoped)](https://img.shields.io/npm/v/@arcdelta/sx?label=npm)](https://www.npmjs.com/package/@arcdelta/sx)
+[![semantic-release](https://img.shields.io/badge/semantic-release-e10079)](https://github.com/semantic-release/semantic-release)
+
+> Micro CLI for interactive running npm & yarn scripts.
 
 ## Motivation
 
@@ -52,4 +56,4 @@ typings on some deps like [enquirer](https://github.com/enquirer/enquirer).
 
 ## License
 
-MIT.
+[MIT](https://github.com/arcdelta/sx/blob/master/LICENSE).
