@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arcdelta/x-s.git"
+    "url": "git+https://github.com/arcdelta/sx.git"
   },
   "keywords": [
     "cli",
@@ -37,9 +37,9 @@
   },
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/arcdelta/x-s/issues"
+    "url": "https://github.com/arcdelta/sx/issues"
   },
-  "homepage": "https://github.com/arcdelta/x-s#readme",
+  "homepage": "https://github.com/arcdelta/sx#readme",
   "devDependencies": {
     "@babel/core": "^7.9.6",
     "@babel/preset-env": "^7.9.6",
