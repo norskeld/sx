@@ -1,4 +1,4 @@
-# x-s
+# sx
 
 > Micro CLI for interactive listing & running npm/yarn scripts.
 
@@ -12,7 +12,7 @@ IDE or `cat`ing (`less`ing, `bat`ing, etc) the `package.json`.
 ## Installation
 
 ```bash
-$ npm i -g x-s
+$ npm i -g @arcdelta/sx
 ```
 
 ## Usage
@@ -20,7 +20,7 @@ $ npm i -g x-s
 ### Basic
 
 ```bash
-$ x-s
+$ sx
 ```
 
 This will run an interactive prompt with scripts as options. You pick one, hit
