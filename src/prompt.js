@@ -1,4 +1,4 @@
-import { dim, bold, gray, cyan, symbols, red } from 'ansi-colors'
+import { dim, bold, gray, cyan, symbols, red, blue } from 'ansi-colors'
 import SelectPrompt from 'enquirer/lib/prompts/select'
 import utils from 'enquirer/lib/utils'
 import Enquirer from 'enquirer'
@@ -31,26 +31,32 @@ export class CustomSelectPrompt extends SelectPrompt {
     super(options)
   }
 
+  pm () {
+    switch (this.options.pm) {
+      case 'npm':
+        return red(this.options.pm)
+      case 'yarn':
+        return blue(this.options.pm)
+    }
+  }
+
   async separator () {
-    const { ellipsis, middot } = symbols
-    const { status } = this.state
+    const dot = dim(symbols.middot)
+    const pm = this.pm()
 
     if (this.options.separator) {
       return super.separator()
     }
 
-    switch (status) {
-      // If still selecting
+    switch (this.state.status) {
       case 'pending':
-        return `${dim(middot)} ${dim(ellipsis)}`
+        return `${dot} ${pm}`
 
-      // If selected
       case 'submitted':
-        return dim(middot)
+        return `${dot} ${pm} ${dot}`
 
-      // If cancelled (via Ctrl+C or similar)
       case 'cancelled':
-        return `${dim(middot)} ${dim('Nothing was selected')}`
+        return `${dot} ${pm} ${dot} ${dim('Nothing was selected')}`
     }
   }
 
