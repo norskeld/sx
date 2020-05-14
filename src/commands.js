@@ -10,13 +10,13 @@ import { keys, undef, def, compose } from './utils'
  * @param {string} [_]
  * @returns {Function}
  */
-const add = _ => /** @returns {Function} */ () => true
+const add = _ => () => true
 
 /**
  * Removes `version` prop from `opts`.
  *
  * @param {Object} options
- * @returns {Object} Without `version` prop
+ * @returns {Object} Options without `version` prop
  */
 const withoutVersion = options =>
   // eslint-disable-next-line no-unused-vars
@@ -26,7 +26,7 @@ const withoutVersion = options =>
  * Removes props with `undefined` values from `opts`.
  *
  * @param {Object} options
- * @returns {Object} Without props with `undefined` values
+ * @returns {Object} Options without undefined props
  */
 const withoutUndefs = options =>
   keys(options)
@@ -39,21 +39,27 @@ const withoutUndefs = options =>
     }, {})
 
 /**
- * Validates options.
+ * Sets default options.
  *
  * @param {Object} options
  * @returns {Object} Options
  */
-const validateOpts = options => {
+const useDefaultPM = options => {
   // If no options provided - use npm
   if (undef(options.npm) && undef(options.yarn)) {
     options.npm = true
   }
 
-  // Don't allow using npm and yarn together
-  if (options.npm && options.yarn) {
-    throw `You can't use both ${bold.underline('--npm')} and ` +
-          `${bold.underline('--yarn')} options.`
+  // Override if env provided
+  const envPM = process.env.SX_PM
+
+  if (envPM) {
+    if (['yarn', 'npm'].includes(envPM)) {
+      options[envPM] = true
+    } else {
+      throw `${bold.underline('SX_PM')}: must be either ${bold('npm')} or ` +
+            `${bold('yarn')}, but got ${bold(envPM)}.`
+    }
   }
 
   return options
@@ -75,9 +81,9 @@ const toString = options =>
  */
 const processArgs = compose(
   toString,
-  validateOpts,
   withoutUndefs,
-  withoutVersion
+  withoutVersion,
+  useDefaultPM
 )
 
 /**
@@ -92,7 +98,6 @@ export function processOptions () {
     .name(name)
     .description(description)
     .usage('[options]')
-    .option('-n, --npm', 'Use npm for running scripts.', add('npm'))
     .option('-y, --yarn', 'Use yarn for running scripts.', add('yarn'))
     .helpOption('-h, --help', 'Show this information.')
     .version(version, '-v, --version', 'Show the current version.')
