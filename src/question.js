@@ -5,8 +5,8 @@ import { keys, entries, def } from './utils'
 /**
  * Returns a question options and choices for the `enquirer`.
  *
- * @param {xs.JSON} pkg The current `package.json`
- * @returns {Promise<xs.Question>} Formed question object for `enquirer`
+ * @param {import('./index').JSON} pkg The current `package.json`
+ * @returns {Promise<import('./index').Question>} Formed question object for `enquirer`
  */
 export async function makeQuestion (pkg) {
   if (!hasValidScriptsField(pkg)) {
@@ -15,7 +15,7 @@ export async function makeQuestion (pkg) {
 
   try {
     /**
-     * @type {Array<xs.Choice>}
+     * @type {Array<import('./index').Choice>}
      */
     const choices =
       entries(pkg.scripts)

@@ -17,7 +17,7 @@ export const entries = x => Object.entries(x)
 /**
  * Checks if supplied argument is defined.
  *
- * @param {any} x
+ * @param {unknown} x
  * @returns {boolean}
  */
 export const def = x => typeof x !== 'undefined'
@@ -25,7 +25,7 @@ export const def = x => typeof x !== 'undefined'
 /**
  * Checks if supplied argument is not defined.
  *
- * @param {any} x
+ * @param {unknown} x
  * @returns {boolean}
  */
 export const undef = x => !def(x)

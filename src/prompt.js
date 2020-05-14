@@ -9,8 +9,8 @@ const SPACE = ' '
 /**
  * Runs an interactive prompt with scripts as options.
  *
- * @param {xs.PromptOpts} opts
- * @returns {Promise<xs.Meta>} Meta
+ * @param {import('./index').PromptOpts} opts
+ * @returns {Promise<import('./index').Meta>} Meta
  */
 export async function processPrompt ({ question, pm }) {
   const answer = await (new Enquirer())

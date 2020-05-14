@@ -4,7 +4,7 @@ import { spawn } from 'child_process'
  * Executes a script `spawn`ing a subprocess. Using this instead of `exec`,
  * because `spawn` allows to specify `stdio`, `stdout` and `stderr`.
  *
- * @param {ExecuteOpts} payload
+ * @param {import('./index').ExecuteOpts} payload
  * @returns {Promise<import('child_process').ChildProcess>} Subprocess
  */
 export async function execute ({ meta, pm }) {

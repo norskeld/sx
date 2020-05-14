@@ -6,7 +6,7 @@ import { resolve } from 'path'
  * Loads `package.json` in the current working directory, i.e. directory where
  * `x-s` was executed.
  *
- * @returns {Promise<xs.Meta>} Package JSON
+ * @returns {Promise<import('./index').Meta>} Package JSON
  */
 export async function loadPackage () {
   const pkgDir = process.cwd()

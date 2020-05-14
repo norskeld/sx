@@ -1,4 +1,7 @@
-declare namespace xs {
+export = sx
+export as namespace sx
+
+declare namespace sx {
   type PackageManager = 'npm' | 'yarn'
 
   interface ExecuteOpts {
