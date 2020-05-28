@@ -10,11 +10,12 @@
     "sx": "./bin/sx"
   },
   "scripts": {
-    "lint": "eslint . --ext .js",
-    "lint:fix": "eslint . --ext .js --fix",
     "commit": "git-cz",
     "build": "tsc",
     "build:watch": "tsc -w",
+    "style": "npm run style:format && npm run style:lint",
+    "style:format": "prettier --write \"src/**/*.ts\"",
+    "style:lint": "eslint src --ext .js,.ts --fix",
     "install:g": "npm run build && npm i -g",
     "release": "npx semantic-release",
     "release:dry": "npx semantic-release --dry-run",
@@ -53,8 +54,10 @@
     "@typescript-eslint/parser": "^3.0.2",
     "commitizen": "^4.1.2",
     "eslint": "^7.0.0",
+    "eslint-config-prettier": "^6.11.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.6",
+    "prettier": "^2.0.5",
     "semantic-release": "^17.0.7",
     "typescript": "^3.9.3"
   },
