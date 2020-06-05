@@ -1,8 +1,12 @@
-import { readJson, pathExists } from 'fs-extra'
+import { readFile, exists } from 'fs'
 import { bold } from 'ansi-colors'
+import { promisify } from 'util'
 import { resolve } from 'path'
 
 import { JSON } from '../types'
+
+const readJson = promisify(readFile)
+const pathExists = promisify(exists)
 
 /**
  * Loads `package.json` in the current working directory, i.e. directory where
@@ -19,9 +23,7 @@ export async function loadPackage(): Promise<JSON> {
   }
 
   try {
-    return await readJson(pkgPath, {
-      encoding: 'utf8'
-    })
+    return JSON.parse(await readJson(pkgPath, { encoding: 'utf8' }))
   } catch (err) {
     throw `Couldn't read ${bold(`package.json`)}. Details: ${err}`
   }
