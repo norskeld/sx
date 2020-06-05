@@ -1,5 +1,5 @@
 {
-  "editor.rulers": [80],
+  "editor.rulers": [100],
   "typescript.tsdk": "node_modules/typescript/lib",
   "eslint.enable": true,
   "[typescript]": {
