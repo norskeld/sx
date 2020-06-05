@@ -1,7 +1,7 @@
 {
   "name": "@arcdelta/sx",
   "version": "1.2.0",
-  "description": "Micro CLI for interactive listing & running npm scripts.",
+  "description": "Micro CLI for interactive running npm & yarn scripts.",
   "main": "./dist/index.js",
   "files": [
     "dist"

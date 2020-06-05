@@ -39,3 +39,10 @@ export const def = (x: unknown): boolean => typeof x !== 'undefined'
  * @param x
  */
 export const undef = (x: unknown): boolean => !def(x)
+
+/**
+ * Gets the first element of the given array.
+ *
+ * @param xs
+ */
+export const head = <T = unknown>([x]: Array<T>): T | undefined => x
