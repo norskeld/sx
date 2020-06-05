@@ -3,6 +3,7 @@
 [![CircleCI](https://img.shields.io/circleci/build/github/arcdelta/sx/master)](https://circleci.com/gh/arcdelta/sx/tree/master)
 [![npm (scoped)](https://img.shields.io/npm/v/@arcdelta/sx?label=npm)](https://www.npmjs.com/package/@arcdelta/sx)
 [![semantic-release](https://img.shields.io/badge/semantic-release-e10079)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 > Micro CLI for interactive running npm & yarn scripts.
 
