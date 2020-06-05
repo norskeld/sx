@@ -27,19 +27,19 @@ function makeOptions(): Array<Option> {
       pm: true,
       name: 'npm',
       alias: 'n',
-      description: 'Use npm.'
+      description: 'Use npm to run a script.'
     },
     {
       pm: true,
       name: 'yarn',
       alias: 'y',
-      description: 'Use yarn.'
+      description: 'Use yarn to run a script.'
     },
     {
       pm: false,
       name: 'version',
       alias: 'v',
-      description: 'Output version.'
+      description: 'Output the current version.'
     },
     {
       pm: false,
