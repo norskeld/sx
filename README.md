@@ -3,6 +3,7 @@
 [![CircleCI](https://img.shields.io/circleci/build/github/arcdelta/sx/master)](https://circleci.com/gh/arcdelta/sx/tree/master)
 [![npm (scoped)](https://img.shields.io/npm/v/@arcdelta/sx?label=npm)](https://www.npmjs.com/package/@arcdelta/sx)
 [![semantic-release](https://img.shields.io/badge/semantic-release-e10079)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 > Micro CLI for interactive running npm & yarn scripts.
 
@@ -39,22 +40,22 @@ You pick one, hit <kbd>Enter</kbd> and that's it.
 
 | Option            | Description                          |
 | ----------------- | ------------------------------------ |
+| `-n`, `--npm`     | Use **npm** to run a script.         |
 | `-y`, `--yarn`    | Use **yarn** to run a script.        |
-| `-h`, `--help`    | Outputs help information.            |
-| `-v`, `--version` | Outputs the current version.         |
+| `-v`, `--version` | Output the current version.          |
+| `-h`, `--help`    | Output help information.             |
 
 ### Package manager
 
 If you use **yarn** instead of **npm**, you can instruct `sx` to use it as a
 default package manager by exposing a `SX_PM=yarn` environment variable in your
 shell's rc file (`.zshrc`, `.bash_profile`, etc).
+
 ## Deps
 
 This project relies on the following packages:
 
-- [enquirer](https://github.com/enquirer/enquirer) for prompting
 - [fs-extra](https://github.com/jprichardson/node-fs-extra) for fs goodies
-- [commander](https://github.com/tj/commander.js#readme) for parsing args
 - [ansi-colors](https://github.com/doowb/ansi-colors) for... well, colors
 
 ## License
