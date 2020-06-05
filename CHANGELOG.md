@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/arcdelta/sx/compare/v1.2.0...v1.2.1) (2020-06-05)
+
+
+### Bug Fixes
+
+* **command:** fix options description ([06f4929](https://github.com/arcdelta/sx/commit/06f4929a7b9ccdd524db452d74571f5896223776))
+
 # [1.2.0](https://github.com/arcdelta/sx/compare/v1.1.0...v1.2.0) (2020-05-14)
 
 
