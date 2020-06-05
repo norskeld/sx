@@ -16,7 +16,20 @@
     "quotes": ["error", "single", { "allowTemplateLiterals": true }],
     "no-unused-vars": [
       "warn",
-      { "args": "after-used", "argsIgnorePattern": "_" }
-    ]
+      {
+        "args": "after-used",
+        "argsIgnorePattern": "_",
+        "varsIgnorePattern": "_"
+      }
+    ],
+    "@typescript-eslint/no-unused-vars": [
+      "warn",
+      {
+        "args": "after-used",
+        "argsIgnorePattern": "_",
+        "varsIgnorePattern": "_"
+      }
+    ],
+    "@typescript-eslint/triple-slash-reference": "off"
   }
 }

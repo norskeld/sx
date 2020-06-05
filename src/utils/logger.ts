@@ -5,16 +5,16 @@ import { red, cyan } from 'ansi-colors'
  *
  * @param {string} message
  */
-export const error = (message) => (console.error(red(message)))
+export const error = (message: string): void => console.error(red(message))
 
 /**
  * Logs normal message.
  *
  * @param {string} message
  */
-export const log = (message) => (console.log(cyan(message)))
+export const log = (message: string): void => console.log(cyan(message))
 
 /**
  * Clear the console/stdout.
  */
-export const clear = () => (console.clear())
+export const clear = (): void => console.clear()
