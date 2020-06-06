@@ -1,12 +1,9 @@
-import { readFile, exists } from 'fs'
+import { readFile, access } from 'fs/promises'
 import { bold } from 'ansi-colors'
-import { promisify } from 'util'
+import { constants } from 'fs'
 import { resolve } from 'path'
 
 import { JSON } from '../types'
-
-const readJson = promisify(readFile)
-const pathExists = promisify(exists)
 
 /**
  * Loads `package.json` in the current working directory, i.e. directory where
@@ -14,16 +11,16 @@ const pathExists = promisify(exists)
  */
 export async function loadPackage(): Promise<JSON> {
   const pkgDir = process.cwd()
+  const pkgPath = resolve(pkgDir, 'package.json')
 
-  // TODO: `resolve` is probably redundant here
-  const pkgPath = resolve(pkgDir, './package.json')
-
-  if (!(await pathExists(pkgPath))) {
-    throw `Couldn't locate ${bold(`package.json`)} at ${bold(pkgDir)}.`
+  try {
+    await access(pkgPath, constants.F_OK | constants.R_OK)
+  } catch {
+    throw `Couldn't locate ${bold(`package.json`)} at ${bold(pkgDir)} or it's not readable.`
   }
 
   try {
-    return JSON.parse(await readJson(pkgPath, { encoding: 'utf8' }))
+    return JSON.parse(await readFile(pkgPath, { encoding: 'utf8' }))
   } catch (err) {
     throw `Couldn't read ${bold(`package.json`)}. Details: ${err}`
   }
