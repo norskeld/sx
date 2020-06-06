@@ -1,9 +1,11 @@
-import { readFile, access } from 'fs/promises'
+import { promises, constants } from 'fs'
 import { bold } from 'ansi-colors'
-import { constants } from 'fs'
 import { resolve } from 'path'
 
 import { JSON } from '../types'
+
+// Prior to 14.x node doesn't have `fs/promises` alias
+const { access, readFile } = promises
 
 /**
  * Loads `package.json` in the current working directory, i.e. directory where

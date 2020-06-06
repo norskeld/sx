@@ -22,6 +22,8 @@ If you are like me—read on.
 
 ## Installation
 
+> Node v12.18.0 or higher is required
+
 ```bash
 $ npm i -g @arcdelta/sx
 ```

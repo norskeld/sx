@@ -1,11 +1,13 @@
-import { readFile, writeFile, access } from 'fs/promises'
+import { promises, constants } from 'fs'
 import { bold } from 'ansi-colors'
-import { constants } from 'fs'
 import { resolve } from 'path'
 
 import { name, description, version } from '../package.json'
 import { error, log } from '../src/utils/logger'
 import tsconfig from '../tsconfig.json'
+
+// Prior to 14.x node doesn't have `fs/promises` alias
+const { access, writeFile, readFile } = promises
 
 async function update(): Promise<void> {
   // Get the path to the package.js which contains actual name, description and version info
