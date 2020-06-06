@@ -1,3 +1,11 @@
+## [1.2.3](https://github.com/arcdelta/sx/compare/v1.2.2...v1.2.3) (2020-06-06)
+
+
+### Bug Fixes
+
+* **command:** fix trimming options in help message ([91b4a29](https://github.com/arcdelta/sx/commit/91b4a29a849ee59a8401f0ab00066faac401bc18))
+* **semantic-release:** remove prepublishOnly hook ([f1f5616](https://github.com/arcdelta/sx/commit/f1f5616368c8f6d59241d8e4d0b4bf1983fe2f95))
+
 ## [1.2.2](https://github.com/arcdelta/sx/compare/v1.2.1...v1.2.2) (2020-06-06)
 
 
