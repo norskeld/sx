@@ -11,7 +11,7 @@ export const SPACE = ' '
 /**
  * Double space.
  */
-export const DOUBLE = '  '
+export const DOUBLE_SPACE = '  '
 
 /**
  * End of line.

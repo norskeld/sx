@@ -1,4 +1,4 @@
-import { EOL, EMPTY, DOUBLE, SPACE } from '../utils/constants'
+import { EOL, EMPTY, DOUBLE_SPACE, SPACE } from '../utils/constants'
 import { PackageManager } from '../types'
 import { error } from '../utils/logger'
 import { head } from '../utils/fns'
@@ -71,7 +71,7 @@ function outputHelp(): void {
 
   // Form a string from options
   const outputOpts = paddedOpts
-    .reduce((acc, { name, description }) => acc + name + DOUBLE + description + EOL, EMPTY)
+    .reduce((acc, { name, description }) => acc + name + DOUBLE_SPACE + description + EOL, EMPTY)
     .trimRight()
 
   console.log(`Usage: ${pkg.name} [options]${EOL}`)
