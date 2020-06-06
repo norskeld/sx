@@ -31,11 +31,12 @@
     "url": "git+https://github.com/arcdelta/sx.git"
   },
   "keywords": [
-    "cli",
     "node",
-    "interactive",
-    "npm-scripts",
-    "npm"
+    "cli",
+    "npm",
+    "yarn",
+    "scripts",
+    "interactive"
   ],
   "author": {
     "name": "Vladislav Mamon",
