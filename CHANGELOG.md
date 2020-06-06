@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/arcdelta/sx/compare/v1.2.1...v1.2.2) (2020-06-06)
+
+
+### Bug Fixes
+
+* **command:** fix the issue with empty dist ([e505cd9](https://github.com/arcdelta/sx/commit/e505cd9fbfda5d5ba437f21d5e5ce764b3b2e591))
+
 ## [1.2.1](https://github.com/arcdelta/sx/compare/v1.2.0...v1.2.1) (2020-06-05)
 
 
