@@ -1,3 +1,10 @@
+## [2.0.1](https://github.com/arcdelta/sx/compare/v2.0.0...v2.0.1) (2020-06-06)
+
+
+### Bug Fixes
+
+* **prompt:** fix spacing on prompt options ([4b98043](https://github.com/arcdelta/sx/commit/4b9804363954b714c0759a7cff124d46b4ed1375))
+
 # [2.0.0](https://github.com/arcdelta/sx/compare/v1.2.3...v2.0.0) (2020-06-06)
 
 
