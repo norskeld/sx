@@ -5,7 +5,7 @@ import { EventEmitter } from 'events'
 
 import { PromptOptions, Choice, PackageManager, PromptEvent } from '../types'
 import { beep, cursorHide, cursorShow, eraseLine, cursorTo, eraseLines } from './ansi'
-import { EOL, EMPTY, SPACE, DOUBLE } from '../utils/constants'
+import { EOL, EMPTY, SPACE } from '../utils/constants'
 import { symbols } from './symbols'
 import { join } from '../utils/fns'
 
@@ -325,13 +325,10 @@ export class Prompt extends EventEmitter {
 
       for (let index = 0; index < this.choices.length; index++) {
         const choice = this.choices[index]
-        let title = EMPTY
-        let prefix = EMPTY
-        let desc = EMPTY
 
-        title = this.cursor === index ? cyan(choice.script) : white(choice.script)
-        prefix = (this.cursor === index ? cyan(angle) + SPACE : DOUBLE) + prefix
-        desc =
+        const title = this.cursor === index ? cyan(choice.script) : white(choice.script)
+        const prefix = this.cursor === index ? cyan(angle) : SPACE
+        const desc =
           this.cursor === index
             ? cyan.dim(middot + SPACE + choice.command)
             : white.dim(middot + SPACE + choice.command)
