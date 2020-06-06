@@ -2,12 +2,7 @@ import { EOL, EMPTY, DOUBLE, SPACE } from '../utils/constants'
 import { PackageManager } from '../types'
 import { error } from '../utils/logger'
 import { head } from '../utils/fns'
-
-import {
-  name as pkgName,
-  version as pkgVersion,
-  description as pkgDescription
-} from '../../package.json'
+import pkg from '../package'
 
 interface Option {
   pm: boolean
@@ -51,13 +46,10 @@ function makeOptions(): Array<Option> {
 }
 
 function outputVersion(): void {
-  console.log(pkgVersion)
+  console.log(pkg.version)
 }
 
 function outputHelp(): void {
-  // Get the package name
-  const [, name] = pkgName.split('/')
-
   // Pre-form options for help message
   const options = makeOptions().reduce<Array<HelpOption>>(
     (acc, { name, alias, description }) =>
@@ -82,8 +74,8 @@ function outputHelp(): void {
     .reduce((acc, { name, description }) => acc + name + DOUBLE + description + EOL, EMPTY)
     .trim()
 
-  console.log(`Usage: ${name} [options]${EOL}`)
-  console.log(`${pkgDescription}${EOL}`)
+  console.log(`Usage: ${pkg.name} [options]${EOL}`)
+  console.log(`${pkg.description}${EOL}`)
   console.log(`Options:`)
   console.log(outputOpts)
 }

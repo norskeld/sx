@@ -5,7 +5,7 @@ import { processCmd } from './core/command'
 import { error } from './utils/logger'
 import { prompt } from './prompt'
 
-export async function sx(): Promise<void> {
+async function sx(): Promise<void> {
   try {
     checkTTY()
 
