@@ -1,3 +1,22 @@
+# [2.0.0](https://github.com/arcdelta/sx/compare/v1.2.3...v2.0.0) (2020-06-06)
+
+
+### Bug Fixes
+
+* **ci:** use node v14 & remove ts-node config ([c1dee87](https://github.com/arcdelta/sx/commit/c1dee87afb8ea82e717c99e7a18a72dce9b8e8eb))
+
+
+### Code Refactoring
+
+* **loader:** use built-in async readFile & access ([747e25f](https://github.com/arcdelta/sx/commit/747e25f83b16429cf177d2f7d53ca5ac8a94a973))
+* **update:** use built-in async readFile, writeFile & access ([86cbab4](https://github.com/arcdelta/sx/commit/86cbab483d6c67a63300431e36273edcf750ac7f))
+
+
+### BREAKING CHANGES
+
+* **loader:** this bumps the required node version to >=10.x
+* **update:** this bumps the required node version to >=10.x
+
 ## [1.2.3](https://github.com/arcdelta/sx/compare/v1.2.2...v1.2.3) (2020-06-06)
 
 
