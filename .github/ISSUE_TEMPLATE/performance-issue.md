@@ -1,23 +1,20 @@
 ---
-name: Bug report
-about: Create a report to help me improve :)
-title: "[BUG]"
-labels: bug
+name: Performance issue
+about: Create a report about performance issues
+title: "[PERF]"
+labels: perf
 assignees: arcdelta
 
 ---
 
-**Describe the bug**
-A clear and concise description of what the bug is.
+**Describe the issue**
+A clear and concise description of what the issue is (e.g. slow re-rendering in Terminal.app).
 
 **To Reproduce**
 Steps to reproduce the behavior.
 
-**Expected behavior**
-A clear and concise description of what you expected to happen.
-
 **Screenshots**
-Add screenshots to help explain your problem.
+Add screenshots and/or GIFs to help explain your problem.
 
 **System information**
  - OS: [e.g. macOS Catalina 10.15.4]
