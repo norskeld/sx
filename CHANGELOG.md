@@ -1,3 +1,10 @@
+## [2.0.2](https://github.com/arcdelta/sx/compare/v2.0.1...v2.0.2) (2020-06-06)
+
+
+### Bug Fixes
+
+* **node:** fix node imports & set min node requirements ([8fa55bd](https://github.com/arcdelta/sx/commit/8fa55bd3eece903ba65a28ec40717593b28c0351))
+
 ## [2.0.1](https://github.com/arcdelta/sx/compare/v2.0.0...v2.0.1) (2020-06-06)
 
 
