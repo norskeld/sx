@@ -72,7 +72,7 @@ function outputHelp(): void {
   // Form a string from options
   const outputOpts = paddedOpts
     .reduce((acc, { name, description }) => acc + name + DOUBLE + description + EOL, EMPTY)
-    .trim()
+    .trimRight()
 
   console.log(`Usage: ${pkg.name} [options]${EOL}`)
   console.log(`${pkg.description}${EOL}`)
