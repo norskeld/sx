@@ -24,8 +24,7 @@
     "release:dry": "npx semantic-release --dry-run",
     "test": "echo \"Passed\"",
     "prebuild": "rimraf dist",
-    "postversion": "ts-node -P tsconfig.ts-node.json scripts/update.ts",
-    "prepublishOnly": "npm run build"
+    "postversion": "ts-node -P tsconfig.ts-node.json scripts/update.ts"
   },
   "repository": {
     "type": "git",
