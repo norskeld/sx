@@ -1,7 +1,7 @@
 ---
 name: Performance issue
 about: Create a report about performance issues
-title: "[PERF]"
+title: "[perf]"
 labels: perf
 assignees: arcdelta
 
@@ -10,7 +10,7 @@ assignees: arcdelta
 **Describe the issue**
 A clear and concise description of what the issue is (e.g. slow re-rendering in Terminal.app).
 
-**To Reproduce**
+**Repro steps**
 Steps to reproduce the behavior.
 
 **Screenshots**
