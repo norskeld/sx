@@ -7,20 +7,20 @@ assignees: arcdelta
 
 ---
 
-**Describe the issue**
-A clear and concise description of what the issue is (e.g. slow re-rendering in Terminal.app).
+### Describe the issue
+A clear and concise description of what the issue is. Ex. Flickering on huge lists of options in Terminal.app.
 
-**Repro steps**
+### Repro steps
 Steps to reproduce the behavior.
 
-**Screenshots**
+### Screenshots
 Add screenshots and/or GIFs to help explain your problem.
 
-**System information**
+### System information
  - OS: [e.g. macOS Catalina 10.15.4]
  - Shell: [e.g. zsh 5.7.1]
  - Terminal: [e.g. iTerm2 3.3.10, Alacritty, Terminal.app 2.10]
  - @arcdelta/sx version [e.g. 2.0.1]
 
-**Additional context**
+### Additional context
 Add any other context about the problem here.
