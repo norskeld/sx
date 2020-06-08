@@ -1,4 +1,4 @@
-export type PackageManager = 'npm' | 'yarn'
+export type PackageManager = 'npm' | 'pnpm' | 'yarn'
 
 export interface JSON {
   // eslint-disable-next-line @typescript-eslint/no-explicit-any

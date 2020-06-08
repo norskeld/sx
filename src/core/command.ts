@@ -1,11 +1,18 @@
 import { EOL, EMPTY, DOUBLE_SPACE, SPACE } from '../utils/constants'
 import { PackageManager } from '../types'
+import { head, join } from '../utils/fns'
 import { error } from '../utils/logger'
-import { head } from '../utils/fns'
 import pkg from '../package'
 
-interface Option {
-  pm: boolean
+interface PackageManagerOption {
+  pm: true
+  name: PackageManager
+  alias: string
+  description: string
+}
+
+interface OtherOption {
+  pm: false
   name: string
   alias: string
   description: string
@@ -16,6 +23,8 @@ interface HelpOption {
   description: string
 }
 
+type Option = PackageManagerOption | OtherOption
+
 function makeOptions(): Array<Option> {
   return [
     {
@@ -23,6 +32,12 @@ function makeOptions(): Array<Option> {
       name: 'npm',
       alias: 'n',
       description: 'Use npm to run a script.'
+    },
+    {
+      pm: true,
+      name: 'pnpm',
+      alias: 'p',
+      description: 'Use pnpm to run a script.'
     },
     {
       pm: true,
@@ -92,12 +107,15 @@ function validateProcessedOptions(options: Array<Option>): void {
 
 function resolveFromEnv(): PackageManager | void {
   const fromEnv = process.env.SX_PM as PackageManager
+  const allowedPackageManagers = makeOptions()
+    .filter((x) => x.pm)
+    .map((x) => x.name)
 
   if (fromEnv) {
-    if (['yarn', 'npm'].includes(fromEnv)) {
+    if (allowedPackageManagers.includes(fromEnv)) {
       return fromEnv
     } else {
-      throw `'SX_PM: must be either 'npm' or 'yarn', but got ${fromEnv}.`
+      throw `'SX_PM must be one of: ${join(allowedPackageManagers, ', ')}, but got ${fromEnv}.`
     }
   }
 }
@@ -118,6 +136,9 @@ function processOption(option?: Option): PackageManager | void {
   switch (option.name) {
     case 'npm':
       return 'npm'
+
+    case 'pnpm':
+      return 'pnpm'
 
     case 'yarn':
       return 'yarn'

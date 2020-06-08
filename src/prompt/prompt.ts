@@ -1,5 +1,5 @@
 import { createInterface, emitKeypressEvents, Interface, Key } from 'readline'
-import { cyan, white, red, blue, green, bold } from 'ansi-colors'
+import { cyan, white, red, blue, green, bold, yellow } from 'ansi-colors'
 import { ReadStream, WriteStream } from 'tty'
 import { EventEmitter } from 'events'
 
@@ -95,11 +95,24 @@ export class Prompt extends EventEmitter {
     return this.cursor === this.choices.length - 1
   }
 
-  private get formattedOutput(): string {
-    const { message, messageDone, messageCancelled, pm, selection } = this
-    const { question, middot, check, cross } = symbols
+  private get formattedPackageManager(): string {
+    switch (this.pm) {
+      case 'pnpm':
+        return yellow(this.pm)
 
-    const cpm = pm === 'npm' ? red(pm) : blue(pm)
+      case 'yarn':
+        return blue(this.pm)
+
+      case 'npm':
+      default:
+        return red(this.pm)
+    }
+  }
+
+  private get formattedOutput(): string {
+    const { message, messageDone, messageCancelled, selection } = this
+    const { question, middot, check, cross } = symbols
+    const cpm = this.formattedPackageManager
 
     switch (this.state) {
       case PromptState.Pending:

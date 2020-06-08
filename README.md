@@ -49,6 +49,7 @@ I have plans on adding [lerna support](https://github.com/arcdelta/sx/issues/2) 
 | Option            | Description                          |
 | ----------------- | ------------------------------------ |
 | `-n`, `--npm`     | Use **npm** to run a script.         |
+| `-p`, `--pnpm`    | Use **pnpm** to run a script.        |
 | `-y`, `--yarn`    | Use **yarn** to run a script.        |
 | `-v`, `--version` | Output the current version.          |
 | `-h`, `--help`    | Output help message.                 |
