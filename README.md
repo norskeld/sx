@@ -10,15 +10,25 @@
 
 ## Gosh, why?
 
-First, I wanted to practise creating public CLI packages/libraries.
+**First**, I wanted to practise creating public CLI packages/libraries.
 
-Secondly, I'm lazy. Like, *really lazy*. I don't even like to type much. And sometimes I'm perplexed
+**Secondly**, I'm lazy. Like, *really lazy*. I don't even like to type much. And sometimes I'm perplexed
 by amount of steps required to run an npm or yarn script. Especially if you can't remember what
 scripts a project even has without diving into an IDE or `cat`ing (`less`ing, `bat`ing) a
 `package.json`.
 
-Thirdly, if you seek for autocompletion, I would suggest you to use [this zsh enhancement](https://github.com/lukechilds/zsh-better-npm-completion).
+**Thirdly**, if you seek for autocompletion, I would suggest you to use [this zsh enhancement](https://github.com/lukechilds/zsh-better-npm-completion).
 If you are like me—read on.
+
+## Features
+
+You can:
+
+- Interactively select and run scripts from `package.json`
+- Use different package managers: **npm**, **pnpm** or **yarn**
+- Override default package manager (**npm**) via env variable
+
+I have plans on adding support for lerna and running multiple scripts. You can [check the milestones](https://github.com/arcdelta/sx/milestones?direction=asc&sort=title&state=open).
 
 ## Installation
 
@@ -38,11 +48,8 @@ Just type at the root of your project:
 $ sx
 ```
 
-This will run an interactive prompt with scripts from `package.json` as selectable options.
-You pick one, hit <kbd>Enter</kbd> and that's it.
-
-I have plans on adding [lerna support](https://github.com/arcdelta/sx/issues/2) and
-[picking multiple scripts](https://github.com/arcdelta/sx/issues/9).
+This will run an interactive prompt with scripts from `package.json` as selectable options. You pick
+one, hit <kbd>Enter</kbd> and that's it.
 
 ### Options
 
@@ -56,9 +63,9 @@ I have plans on adding [lerna support](https://github.com/arcdelta/sx/issues/2) 
 
 ### Package manager
 
-If you use **yarn** instead of **npm**, you can instruct `sx` to use it as a
-default package manager by exposing a `SX_PM=yarn` environment variable in your
-shell's rc file (`.zshrc`, `.bash_profile`, etc).
+If you use **yarn** or **pnpm** instead of **npm**, you can instruct `sx` to use it as a default
+package manager by exposing a `SX_PM=yarn` environment variable in your shell's rc file (`.zshrc`,
+`.bash_profile`, etc).
 
 ## Deps
 
