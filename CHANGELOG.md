@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/arcdelta/sx/compare/v2.0.2...v2.1.0) (2020-06-08)
+
+
+### Features
+
+* add pnpm support ([6fc4561](https://github.com/arcdelta/sx/commit/6fc456178621016ae9ce53e6a0974d3c9b53d2dc))
+
 ## [2.0.2](https://github.com/arcdelta/sx/compare/v2.0.1...v2.0.2) (2020-06-06)
 
 
