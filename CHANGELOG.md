@@ -1,3 +1,10 @@
+## [2.1.1](https://github.com/arcdelta/sx/compare/v2.1.0...v2.1.1) (2020-06-08)
+
+
+### Bug Fixes
+
+* fix actual execution of scripts for pnpm ([f2560ac](https://github.com/arcdelta/sx/commit/f2560ac98d918a3d9e3b4951192edda5e322955a))
+
 # [2.1.0](https://github.com/arcdelta/sx/compare/v2.0.2...v2.1.0) (2020-06-08)
 
 
