@@ -9,7 +9,7 @@ import { ExecuteOptions } from '../types'
  */
 export async function execute(options: ExecuteOptions): Promise<ChildProcess> {
   const { pm, meta } = options
-  const args = pm === 'npm' ? ['run', meta.script] : [meta.script]
+  const args = pm === 'npm' || pm === 'pnpm' ? ['run', meta.script] : [meta.script]
 
   return spawn(pm, args, {
     stdio: 'inherit',
