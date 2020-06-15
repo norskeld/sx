@@ -1,9 +1,9 @@
 # :zap: sx
 
-[![CircleCI](https://img.shields.io/circleci/build/github/arcdelta/sx/master)](https://circleci.com/gh/arcdelta/sx/tree/master)
-[![npm (scoped)](https://img.shields.io/npm/v/@arcdelta/sx?label=npm)](https://www.npmjs.com/package/@arcdelta/sx)
-[![semantic-release](https://img.shields.io/badge/semantic-release-e10079)](https://github.com/semantic-release/semantic-release)
-[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![CircleCI](https://flat.badgen.net/circleci/github/arcdelta/sx/master)](https://circleci.com/gh/arcdelta/sx/tree/master)
+[![npm (scoped)](https://flat.badgen.net/npm/v/@arcdelta/sx?color=red)](https://www.npmjs.com/package/@arcdelta/sx)
+[![semantic-release](https://flat.badgen.net/badge/semantic/release/e10079)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://flat.badgen.net/badge/commitizen/friendly/green)](http://commitizen.github.io/cz-cli/)
 ![Dependabot](https://flat.badgen.net/dependabot/arcdelta/sx?icon=dependabot)
 
 > Micro CLI for interactive running npm & yarn scripts.
