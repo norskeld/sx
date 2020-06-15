@@ -1,10 +1,10 @@
 # :zap: sx
 
-[![CircleCI](https://flat.badgen.net/circleci/github/arcdelta/sx/master?scale=1.2)](https://circleci.com/gh/arcdelta/sx/tree/master)
-[![npm (scoped)](https://flat.badgen.net/npm/v/@arcdelta/sx?color=red&scale=1.2)](https://www.npmjs.com/package/@arcdelta/sx)
-[![semantic-release](https://flat.badgen.net/badge/semantic/release/e10079?scale=1.2)](https://github.com/semantic-release/semantic-release)
-[![Commitizen friendly](https://flat.badgen.net/badge/commitizen/friendly/green?scale=1.2)](http://commitizen.github.io/cz-cli/)
-![Dependabot](https://flat.badgen.net/dependabot/arcdelta/sx?icon=dependabot?scale=1.2)
+[![CircleCI](https://flat.badgen.net/circleci/github/arcdelta/sx/master)](https://circleci.com/gh/arcdelta/sx/tree/master)
+[![npm (scoped)](https://flat.badgen.net/npm/v/@arcdelta/sx?color=red)](https://www.npmjs.com/package/@arcdelta/sx)
+[![semantic-release](https://flat.badgen.net/badge/semantic/release/e10079)](https://github.com/semantic-release/semantic-release)
+[![Commitizen friendly](https://flat.badgen.net/badge/commitizen/friendly/green)](http://commitizen.github.io/cz-cli/)
+![Dependabot](https://flat.badgen.net/dependabot/arcdelta/sx?icon=dependabot)
 
 > Micro CLI for interactive running npm & yarn scripts.
 
