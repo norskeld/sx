@@ -1,16 +1,14 @@
 # :zap: sx
 
-[![CircleCI](https://flat.badgen.net/circleci/github/arcdelta/sx/master)](https://circleci.com/gh/arcdelta/sx/tree/master)
 [![npm (scoped)](https://flat.badgen.net/npm/v/@arcdelta/sx?color=red)](https://www.npmjs.com/package/@arcdelta/sx)
 [![semantic-release](https://flat.badgen.net/badge/semantic/release/e10079)](https://github.com/semantic-release/semantic-release)
 [![Commitizen friendly](https://flat.badgen.net/badge/commitizen/friendly/green)](http://commitizen.github.io/cz-cli/)
-![Dependabot](https://flat.badgen.net/dependabot/arcdelta/sx?icon=dependabot)
 
 > Micro CLI to interactively run npm & yarn scripts.
 
 ## Deprecated
 
-#### This `Node` + `TypeScript` version is now deprecated and will not be maintained as I'm [rewriting everything in **Rust**](https://raw.githubusercontent.com/rochacbruno/rust_memes/master/img/riir.jpg).
+### This `Node` + `TypeScript` version is now deprecated and will not be maintained as I'm *[rewriting everything in **Rust**](https://raw.githubusercontent.com/rochacbruno/rust_memes/master/img/riir.jpg)* 🦀. The Rust version [can be found here](https://github.com/arcdeltax/rsx).
 
 ## Gosh, why?
 
