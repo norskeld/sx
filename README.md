@@ -6,7 +6,11 @@
 [![Commitizen friendly](https://flat.badgen.net/badge/commitizen/friendly/green)](http://commitizen.github.io/cz-cli/)
 ![Dependabot](https://flat.badgen.net/dependabot/arcdelta/sx?icon=dependabot)
 
-> Micro CLI for interactive running npm & yarn scripts.
+> Micro CLI to interactively run npm & yarn scripts.
+
+## Deprecated
+
+#### This `Node` + `TypeScript` version is now deprecated and will not be maintained as I'm [rewriting everything in **Rust**](https://raw.githubusercontent.com/rochacbruno/rust_memes/master/img/riir.jpg).
 
 ## Gosh, why?
 
